@@ -1,0 +1,127 @@
+copyright: |
+  <div>Documents are licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div>
+  <div>Copyright &copy; 2025-future ECOS Team</div>
+  <div><a href="#__consent">Change cookie settings</a></div>
+
+theme:
+  name: material
+  custom_dir: tpl/theme
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - content.action.edit
+    - content.action.view
+
+plugins:
+  - tags
+  - search
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+        remove_comments: true
+  - git-revision-date-localized:
+      enabled: false
+      type: iso_date
+  - git-committers:
+      enabled: false
+      repository: ecoslab/ecos-tpl-mkdocs
+      branch: main
+      exclude:
+        - index.md
+
+extra:
+  alternate:
+    - name: "中文"
+      link: /
+      lang: zh
+    - name: "English"
+      link: /en/
+      lang: en
+  consent:
+    title: Cookie Consent
+    description: >-
+        We use cookies to recognize your repeated visits and preferences, as well measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.
+  social:
+    - icon: fontawesome/solid/earth
+      link: https://ecoslab.com
+      name: Website
+    - icon: fontawesome/brands/github
+      link: https://github.com/ecoslab
+      name: GitHub
+  scope: /
+
+markdown_extensions:
+  # Admonitions
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  # Annotations
+  - attr_list
+  - md_in_html
+  - pymdownx.superfences
+  # Buttons
+  - attr_list
+  # Code blocks
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  # Content tabls
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  # Data tables
+  - tables
+  # Diagrams
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  # footnotes
+  - footnotes
+  # Formatting
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  # Grids
+  - attr_list
+  - md_in_html
+  # Icons, Emojis
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  # Images
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption
+  # Lists
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  # Math
+  - pymdownx.arithmatex:
+      generic: true
+  # Tooltips
+  - abbr
+  - attr_list
+  - pymdownx.snippets
+
+extra_javascript:
+  - res/js/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js

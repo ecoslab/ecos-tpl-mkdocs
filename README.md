@@ -1,0 +1,1 @@
+# ECOS Template for MkDocs
