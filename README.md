@@ -1,1 +1,1 @@
-# MkDocs template for ECOS project
+# ECOS Template
