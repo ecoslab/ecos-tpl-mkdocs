@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block container %}
+   <style>
+      .md-typeset table:not([class]) th:not([align]) {
+         text-align: center;
+      }
+      .md-typeset table:not([class]) td:not([align]) {
+         text-align: justify;
+         vertical-align: middle
+      }
+      .md-content {
+         text-align: justify;
+      }
+   </style>
+   <div class="md-content" data-md-component="content">
+      <article class="md-content__inner md-typeset">
+         {% block content %}
+           {% include "partials/content.html" %}
+         {% endblock %}
+      </article>
+   </div>
+{% endblock %}

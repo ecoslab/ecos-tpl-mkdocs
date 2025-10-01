@@ -24,6 +24,7 @@ theme:
 
 plugins:
   - tags
+  - meta
   - search
   - minify:
       minify_html: true
