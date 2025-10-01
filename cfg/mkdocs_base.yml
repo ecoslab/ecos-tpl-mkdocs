@@ -1,7 +1,10 @@
 copyright: |
-  <div>Documents are licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div>
-  <div>Copyright &copy; 2025-future ECOS Team</div>
-  <div><a href="#__consent">Change cookie settings</a></div>
+  <div>Copyright &copy; 2025 ECOS Team. All under
+    <a
+      href="https://creativecommons.org/licenses/by-nc-sa/4.0"
+      target="_blank" rel="noopener">CC BY-NC-SA 4.0
+    </a>
+  </div>
 
 theme:
   name: material
@@ -123,5 +126,5 @@ markdown_extensions:
   - pymdownx.snippets
 
 extra_javascript:
-  - res/js/mathjax.js
+  - assets/javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js

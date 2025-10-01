@@ -19,7 +19,7 @@ clean:
 
 clean-link:
 	@echo "Cleaning up..."
-	@for target in $(LINK_TARGETS); do \
+	@for target in $(LINK_TARGET); do \
 		if [ -L "$$target/res" ]; then \
 			echo "Removing symlink: $$target/res"; \
 			rm $$target/res; \
