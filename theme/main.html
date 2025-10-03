@@ -1,36 +1,37 @@
 {% extends "base.html" %}
 
 {% block container %}
-   <style>
-      .md-typeset table:not([class]) th:not([align]) {
-         text-align: center;
-      }
-      .md-typeset table:not([class]) td:not([align]) {
-         text-align: justify;
-         vertical-align: middle
-      }
-      .md-typeset figcaption {
-         font-style: normal;
-      }
-      .md-content {
-         text-align: justify;
-      }
+  <style>
+    .md-typeset table:not([class]) th:not([align]) {
+      text-align: center;
+    }
+    .md-typeset table:not([class]) td:not([align]) {
+      text-align: justify;
+      vertical-align: middle
+    }
+    .md-typeset figcaption {
+      font-style: normal;
+    }
+    .md-content {
+      text-align: justify;
+    }
 
-      .ecos-brd-card-img {
-         text-align: center;
-         img {
-            height: 250px !important;
-         }
+    .ecos-brd-card-img {
+      text-align: center;
+      img {
+        height: 250px !important;
       }
-      .ecos-brd-card-link {
-         text-align: right;
-      }
-   </style>
-   <div class="md-content" data-md-component="content">
-      <article class="md-content__inner md-typeset">
-         {% block content %}
-           {% include "partials/content.html" %}
-         {% endblock %}
-      </article>
-   </div>
+    }
+    .ecos-brd-card-link {
+      text-align: right;
+    }
+  </style>
+
+  <div class="md-content" data-md-component="content">
+    <article class="md-content__inner md-typeset">
+      {% block content %}
+        {% include "partials/content.html" %}
+      {% endblock %}
+    </article>
+  </div>
 {% endblock %}
