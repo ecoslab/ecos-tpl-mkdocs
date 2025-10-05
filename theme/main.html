@@ -25,6 +25,40 @@
     .ecos-brd-card-link {
       text-align: right;
     }
+    .ecos-brd-card-home {
+      grid-template-columns: repeat(3, minmax(min(100%, 10rem), 1fr)) !important;
+      ul {
+        text-align: center;
+        li {
+          a {
+            color: inherit;
+            transition: none;
+          }
+          a:hover {
+            color: white;
+          }
+          p {
+            height: 100px;
+            margin-top: 0px !important;
+            font-size: 35px;
+          }
+        }
+        li:hover {
+          color: white;
+          cursor: pointer;
+        }
+        li:nth-child(1):hover {
+          background-color: orchid;
+        }
+        li:nth-child(2):hover {
+          background-color: dodgerblue;
+        }
+        li:nth-child(3):hover {
+          background-color: orange;
+          cursor: not-allowed;
+        }
+      }
+    }
   </style>
 
   <div class="md-content" data-md-component="content">
