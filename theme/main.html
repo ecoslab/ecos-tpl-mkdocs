@@ -19,7 +19,7 @@
     .ecos-brd-card-img {
       text-align: center;
       img {
-        height: 250px !important;
+        height: 200px !important;
       }
     }
     .ecos-brd-card-link {
@@ -38,14 +38,20 @@
             color: white;
           }
           p {
-            height: 100px;
             margin-top: 0px !important;
             font-size: 35px;
+          }
+          svg {
+            width: 80px;
+            height: 80px;
           }
         }
         li:hover {
           color: white;
           cursor: pointer;
+          svg {
+            filter: invert(1);
+          }
         }
         li:nth-child(1):hover {
           background-color: orchid;
