@@ -16,7 +16,7 @@ build: | check-venv
 build-rtd: | check-venv
 	@echo "Building documentation..."
 	. $(PY_ACTIVATE) && mkdocs build -f $(MKDOCS_YML) --site-dir $(READTHEDOCS_OUTPUT)/html
-	# @python3 tpl/script/compress_image.py
+	@python3 tpl/script/compress_image.py $(READTHEDOCS_OUTPUT)/html
 
 clean:
 	@echo "Deleting documentation..."
@@ -39,4 +39,4 @@ $(PY_VENV_DIR)/bin/python:
 	@echo "Installing requirements..."
 	. $(PY_ACTIVATE) && pip install -r $(PY_REQUIREMENTS)
 
-.PHONY: serve build clean-link check-venv
+.PHONY: serve build build-rtd clean-link check-venv

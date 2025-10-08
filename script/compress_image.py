@@ -1,6 +1,7 @@
 import subprocess
 from pathlib import Path
 import os
+import argparse
 
 JPG_QUALITY = 80      # 0-100
 PNG_QUALITY = "60-80" # 0-100
@@ -41,4 +42,18 @@ def compress_image(root_dir):
         executor.map(compress_image_once, image_files)
 
 if __name__ == "__main__":
-    compress_image("site")
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "dir",
+        type=str,
+        nargs="?",
+        default="site",
+        help="Directory (default: 'site')"
+    )
+    args = parser.parse_args()
+
+    if not Path(args.dir).exists():
+        print(f"Error: Directory '{args.dir}' does not exist!")
+        exit(1)
+
+    compress_image(args.dir)
