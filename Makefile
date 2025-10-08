@@ -12,6 +12,10 @@ serve: | check-venv
 build: | check-venv
 	@echo "Building documentation..."
 	. $(PY_ACTIVATE) && mkdocs build -f $(MKDOCS_YML)
+
+build-rtd: | check-venv
+	@echo "Building documentation..."
+	. $(PY_ACTIVATE) && mkdocs build -f $(MKDOCS_YML) --site-dir $(READTHEDOCS_OUTPUT)/html
 	# @python3 tpl/script/compress_image.py
 
 clean:
